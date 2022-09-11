@@ -11,6 +11,10 @@ GENERAL
   font-family: "Roboto", "sans-serif";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 li {
   list-style: none;
 }
@@ -62,7 +66,7 @@ section {
 }
 
 .secondary__color {
-  color: #ffd13a;
+  color: #408C5E;
 }
 
 .link__hover-effect {
@@ -212,6 +216,7 @@ nav,
   background-color: white;
   color: #242424;
 }
+
 /*  
 
 LANDING PAGE
@@ -244,7 +249,7 @@ LANDING PAGE
 }
 
 .social__link {
-  background-color: #ffd13a;
+  background-color: #408C5E;
   color: white;
   padding: 6px;
   width: 32px;
@@ -265,9 +270,11 @@ LANDING PAGE
   border: none;
   background-color: #242424;
   color: white;
-  position: absolute;
+  position: fixed;
   bottom: 32px;
   right: 40px;
+  z-index: 100;
+  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.3);
 }
 
 .scroll {
@@ -407,8 +414,8 @@ MODAL
 }
 
 .form__submit {
-  background-color: #ffd13a;
-  border: 2px solid #ffd13a;
+  background-color: #408C5E;
+  border: 2px solid #408C5E;
   color: white;
   font-weight: 700;
   width: 100%;
@@ -423,8 +430,8 @@ MODAL
   background-color: transparent;
 }
 .form__submit:active {
-  border-color: #ffd13a;
-  color: #ffd13a;
+  border-color: #408C5E;
+  color: #408C5E;
 }
 
 .modal__overlay {
@@ -566,6 +573,7 @@ FOOTER
 */
 
 footer {
+  position: relative;
   background-color: #242424;
   display: flex;
   padding: 6% 0;
@@ -642,4 +650,59 @@ SHAPES
 .shape--8 {
   top: 80vh;
   left: 80vw;
+}
+
+/* Small phones, tablets, large smart phones */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 80px;
+  }
+  .header__para {
+    font-size: 20px;
+  }
+  .modal {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0;
+  }
+
+  .modal__half {
+    width: 100%;
+  }
+}
+
+/* Smal phones */
+@media (max-width: 480px) {
+  .title {
+    font-size: 52px;
+  }
+
+  .header__para {
+    font-size: 18px;
+  }
+
+  .nav__link:first-child {
+    display: none;
+  }
+
+  .project__description--para {
+    display: none;
+  }
+  .project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .project__description--sub-title {
+    margin-bottom: 8px;
+  }
+  .modal__half {
+    padding: 40px;
+  }
 }

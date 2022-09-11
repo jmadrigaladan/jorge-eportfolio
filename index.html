@@ -24,7 +24,7 @@
           <img id="personal-logo" src="./assets/logo.svg" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -33,7 +33,7 @@
           </li>
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
@@ -56,15 +56,17 @@
       </nav>
       <header class="header">
         <div class="header__content">
-          <h1 class="title">Hey</h1>
-          <h1 class="title secondary__color">I'm Jorge.</h1>
+          <h1 class="title">Hello,</h1>
+          <h1 class="title secondary__color">I'm Jorge!</h1>
           <p class="header__para">
             I'm a
             <b class="secondary__color">Frontend Software Engineer</b> with a
             strong passion for building web applications with great user
             experiences.
             <br />
-            Here's a bit more <b class="secondary__color click" onclick="toggleModal()">about me.</b>
+            Here's a bit more <b class="secondary__color click" onclick="toggleModal()">
+             about me.
+             </b>
           </p>
           <div class="social__list">
             <a
@@ -87,9 +89,11 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fas fa-envelope"></i>
-      </button>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fas fa-envelope"></i>
+        </button>
+      </a>
       <a href="#projects" class="scroll">
         <div class="scroll_icon click"></div>
       </a>
@@ -305,20 +309,23 @@
           </figure>
           <div class="footer__social--list">
             <a
-              href="#"
+            href="https://github.com/jmadrigaladan"
+            target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
             >
               Github
             </a>
             <a
-              href="#"
-              class="footer__social--link link__hover-effect link__hover-effect--white"
+            href="https://www.linkedin.com/in/jorge-madrigal-adan-b4ab7618a/"
+            target="_blank"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
             >
               LinkedIn
             </a>
             <a
               href="#"
               class="footer__social--link link__hover-effect link__hover-effect--white"
+              onclick="toggleModal()"
             >
               Contact
             </a>
